@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>
+            Project 78 - Family Scrapbook
+        </title>
+
+        <script>
+            var images=["https://image.freepik.com/free-vector/father-riding-son-shoulders-cartoon-vector_81522-483.jpg", "http://clipground.com/images/mam-clipart-18.jpg", "https://clipground.com/images/uncle-png-2.jpg", "https://tse3.mm.bing.net/th?id=OIP.fom8fK2SaPt2MC2rJYf7jQHaHa&pid=Api&P=0&w=300&h=300", "https://clipground.com/images/cute-grandma-cooking-clipart-2.jpg", "https://webstockreview.net/images/grandpa-clipart-animated-2.png", "https://www.netclipart.com/pp/m/25-257367_sister-clip-art-congratulations-my-dear-sister.png", "https://clipartstation.com/wp-content/uploads/2017/11/brother-clipart-1.jpg", "https://tse4.mm.bing.net/th?id=OIP.QWn4cbMr3SeqS7dmdGY21wHaIr&pid=Api&P=0&w=300&h=300"];
+
+            var names=["Jack Wells (dad)", "Nancy Wells (mom)", "Frank Timmons (uncle)", "Linda Timmons (aunt)", "Helen Timmons (grandmother)", "Walter Timmons (grandfather)", "Alan Timmons (cousin)"];
+
+            var i=0;
+
+            function update() {
+                i++;
+                var numbers_of_family_member_in_array=9;
+                if(i>numbers_of_family_member_in_array); {
+                    i=0
+                }
+                var updatedImage=images[i];
+                var updatedName=names[i];
+                document.getElementById("family_member_image").src=updatedImage;
+                document.getElementById("family_member_name").innerHTML=updatedName;
+            }
+        </script>
+    </head>
+
+    <body>
+        <center>
+            <h1>
+                Family Scrapbook
+            </h1>
+
+            <hr>
+            <br>
+            <br>
+
+            <img src="https://webstockreview.net/images/aunt-clipart-sister-3.jpg" style="width: 30%;" id="family_image">
+
+            <br>
+
+            <h4 id="family_member_name">
+                Family Tree
+            </h4>
+
+            <br>
+
+            <button onclick="update()">
+                Next
+            </button>
+        </center>
+    </body>
+</html>
